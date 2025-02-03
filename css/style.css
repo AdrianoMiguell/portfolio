@@ -111,6 +111,8 @@
   width: 100%;
   height: 100%;
 }
+.parallax-content .parallax-text-actor {
+}
 .parallax-image-header-home {
   background-image: url("../assets/img/silhouette-photography-of-person-large.jpg");
 }
@@ -203,12 +205,15 @@
 }
 
 .container-sobre .imagem-sobre-mim {
+  /* background-color: rgb(var(--tert-color)); */
+  /* background-color: #2deea7; */
   background-color: rgb(var(--sec-color));
   max-width: 400px;
   min-width: 250px;
   flex: 1 1 calc(40% - 50px);
   border-radius: 5px;
 }
+
 .container-sobre .imagem-sobre-mim img {
   width: 100%;
   height: auto;
