@@ -95,7 +95,7 @@
 
 .parallax-image {
   position: relative;
-  width: 100vw;
+  width: 100%;
   min-height: 82.5vh;
   max-height: 95vh;
   background-position: center center;
@@ -204,14 +204,16 @@
   flex-direction: column;
 }
 
-.container-sobre .image-sobre-mim {
+.container-sobre .imagem-sobre-mim {
   /* background-color: rgb(var(--tert-color)); */
-  background-color: rgb(0, 255, 234);
-  max-width: 600px;
+  /* background-color: #2deea7; */
+  background-color: rgb(var(--sec-color));
+  max-width: 500px;
   min-width: 250px;
-  flex: 1 1 calc(40% - 25px);
+  flex: 1 1 calc(40% - 50px);
+  border-radius: 5px;
 }
-.container-sobre .image-sobre-mim img {
+.container-sobre .imagem-sobre-mim img {
   width: 100%;
   height: auto;
 }
@@ -234,84 +236,50 @@
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.75);
 }
 
-footer {
-  padding: 1em 2.5em;
+#section-habilidade {
+  background-color: rgb(var(--tert-color));
+  color: aliceblue;
+}
+
+.container-habilidade {
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(var(--tert-color));
-  margin-bottom: 0;
-  margin-top: 1.5rem;
-  gap: 0.5em;
-  color: white;
+  gap: 0.5rem;
 }
-
-footer hr {
-  width: 92vw;
-}
-
-footer .container-contato {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-footer .container-contato a {
-  font-size: 15pt;
-  text-decoration: none;
-  color: white;
-}
-
-footer .texto-autoria {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5em;
-}
-
-
-.container-sobre {
-  padding: 2.5rem 0;
+.habilidade-item {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  gap: 2.5rem;
+  gap: 2rem;
+  overflow-x: scroll;
+  padding-bottom: 1.5rem;
+}
+.habilidade-item::-webkit-scrollbar {
+  height: 5px;
+  border-radius: 2.5px;
+}
+.habilidade-item::-webkit-scrollbar-track {
+  background-color: rgba(var(--main-color), .25);
+}
+.habilidade-item::-webkit-scrollbar-thumb {
+  border-radius: 2.5px;
+  background-color: rgb(var(--main-color));
+}
+.habilidade-item > * {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  border-radius: 50%;
+  font-size: 76pt;
+  cursor: pointer;
 }
 
-.container-sobre .text-sobre-mim {
-  flex: 1 1 calc(40% - 25px);
-  display: flex;
-  flex-direction: column;
-}
-
-.container-sobre .image-sobre-mim {
-  /* background-color: rgb(var(--tert-color)); */
-  background-color: rgb(0, 255, 234);
-  max-width: 600px;
-  min-width: 250px;
-  flex: 1 1 calc(40% - 25px);
-}
-.container-sobre .image-sobre-mim img {
-  width: 100%;
-  height: auto;
-}
-.container-sobre .area-tags-competencias {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.area-tags-competencias .tags-competencias {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.area-tags-competencias .tags-competencias .tag-item {
-  padding: 3px 9px;
-  border-radius: 3px;
-  background-color: rgb(var(--tert-color));
-  color: rgb(var(--sec-color));
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.75);
+.habilidade-text > *:not(:first-child) {
+  display: none;
+  visibility: hidden;
 }
 
 #imagens-projeto {
@@ -328,4 +296,53 @@ footer .texto-autoria {
 #imagens-projeto .div-image img {
   width: 100%;
   height: auto;
+}
+
+
+footer {
+  padding: 3em 2em 1em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(var(--tert-color));
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+  gap: 0.5em;
+  color: white;
+}
+
+footer hr {
+  width: 92vw;
+  border-color: rgba(var(--main-color), .25);
+}
+
+footer .messagem-inspiracao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+footer .messagem-inspiracao * {
+  font-family: "Inter", serif;
+}
+
+footer .container-contato {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+footer .container-contato a {
+  font-size: 25pt;
+  text-decoration: none;
+  color: white;
+}
+
+footer .texto-autoria {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+  font-size: 9pt;
 }
