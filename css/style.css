@@ -205,8 +205,6 @@
 }
 
 .container-sobre .imagem-sobre-mim {
-  /* background-color: rgb(var(--tert-color)); */
-  /* background-color: #2deea7; */
   background-color: rgb(var(--sec-color));
   max-width: 400px;
   min-width: 250px;
