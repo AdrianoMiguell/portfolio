@@ -208,7 +208,7 @@
   /* background-color: rgb(var(--tert-color)); */
   /* background-color: #2deea7; */
   background-color: rgb(var(--sec-color));
-  max-width: 500px;
+  max-width: 400px;
   min-width: 250px;
   flex: 1 1 calc(40% - 50px);
   border-radius: 5px;
